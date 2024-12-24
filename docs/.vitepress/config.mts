@@ -8,10 +8,10 @@ import { groupIconMdPlugin, groupIconVitePlugin, localIconLoader } from 'vitepre
 
 export default defineConfig({
   lang: 'zh-CN',
-  title: "VitePress",
-  description: "我的vitpress文档教程",
+  title: "xgzFlow",
+  description: "xgzIt个人知识库",
 
-  // #region fav
+  // #region fav 路径默认public目录，在 docs目录下新建 public目录即可
   head: [
     ['link', { rel: 'icon', href: '/logo.png' }],
   ],
@@ -21,8 +21,8 @@ export default defineConfig({
 
   //cleanUrls:true, //开启纯净链接无html
 
-  //启用深色模式
-  appearance: 'dark',
+  //启用深色模式 
+  // appearance: true,
 
   //多语言
   locales: {
@@ -69,8 +69,8 @@ export default defineConfig({
         return htmlResult
       },
 
-
-        md.use(groupIconMdPlugin) //代码组图标
+        //代码组图标
+        md.use(groupIconMdPlugin) 
 
     }
 
@@ -80,16 +80,20 @@ export default defineConfig({
     plugins: [
       groupIconVitePlugin({
         customIcon: {
-          ts: localIconLoader(import.meta.url, '../public/svg/typescript.svg'), //本地ts图标导入
-          md: localIconLoader(import.meta.url, '../public/svg/md.svg'), //markdown图标
-          css: localIconLoader(import.meta.url, '../public/svg/css.svg'), //css图标
-          js: 'logos:javascript', //js图标
+          //本地ts图标导入
+          ts: localIconLoader(import.meta.url, '../public/svg/typescript.svg'), 
+          //markdown图标
+          md: localIconLoader(import.meta.url, '../public/svg/md.svg'), 
+          //css图标
+          css: localIconLoader(import.meta.url, '../public/svg/css.svg'), 
+          //js图标
+          js: 'logos:javascript', 
         },
       })
     ],
   },
-
-  lastUpdated: true, //此配置不会立即生效，需git提交后爬取时间戳，没有安装git本地报错可以先注释
+//此配置不会立即生效，需git提交后爬取时间戳，没有安装git本地报错可以先注释
+  lastUpdated: true, 
 
   //主题配置
   themeConfig: {
@@ -265,7 +269,7 @@ export default defineConfig({
     //页脚
     footer: {
       message: 'Released under the MIT License.',
-      copyright: `Copyright © 2023-${new Date().getFullYear()} 备案号：<a href="https://beian.miit.gov.cn/" target="_blank">京****号</a>`,
+      copyright: `Copyright © 2023-${new Date().getFullYear()} 备案号：<a href="https://beian.miit.gov.cn/" target="_blank">大哥大号</a>`,
     },
 
 
@@ -291,6 +295,9 @@ export default defineConfig({
 
   },
 
-
+  // 站点地图
+  sitemap: {
+    hostname: 'https://xgzit.com',
+  }
 
 })

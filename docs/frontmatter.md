@@ -100,7 +100,7 @@ layout: home // [!code focus]
 ---
 hero: // [!code focus:14]
   name: VitePress
-  text: "快速上手中文教程"
+  text: "非常OK的流程引擎"
   tagline: 如果你也想搭建它，那跟我一起做吧
   image:
     src: /logo.png

@@ -1200,7 +1200,7 @@ setTimeout(function () { visible.value = false }, 5000);
             <p class="notice-domain">
                 <strong>
                     详细教程：<a href="https://vitepress.yiov.top/layout.html#%E5%85%AC%E5%91%8A"
-                        target="_blank">vitepress.yiov.top</a>
+                        target="_blank">xxxx.xgzit.com</a>
                 </strong>
             </p>
             <p>QQ 频道：******(无效二维码)</p>
